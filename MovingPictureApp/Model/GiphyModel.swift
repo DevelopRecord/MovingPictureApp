@@ -16,4 +16,13 @@ struct GiphyModel: Decodable {
     let id: String
     let url: String
     let title: String
+    let images: Images
+}
+
+struct Images: Decodable {
+    let original: OriginalImages
+}
+
+struct OriginalImages: Decodable {
+    let url: String
 }

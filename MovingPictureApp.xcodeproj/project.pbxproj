@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FBA8C141281FBA8D00D4EB46 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBA8C140281FBA8D00D4EB46 /* Kingfisher */; };
+		FBA8C145281FCA7D00D4EB46 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8C144281FCA7D00D4EB46 /* UIViewController+.swift */; };
+		FBA8C147281FD6E900D4EB46 /* GifDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8C146281FD6E900D4EB46 /* GifDetailController.swift */; };
+		FBA8C149281FDD3800D4EB46 /* GifDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8C148281FDD3800D4EB46 /* GifDetailView.swift */; };
 		FBBF1737281D5D7000CDE4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBF1736281D5D7000CDE4BC /* AppDelegate.swift */; };
 		FBBF1739281D5D7000CDE4BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBF1738281D5D7000CDE4BC /* SceneDelegate.swift */; };
 		FBBF173E281D5D7000CDE4BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBBF173C281D5D7000CDE4BC /* Main.storyboard */; };
@@ -33,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FBA8C144281FCA7D00D4EB46 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		FBA8C146281FD6E900D4EB46 /* GifDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailController.swift; sourceTree = "<group>"; };
+		FBA8C148281FDD3800D4EB46 /* GifDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifDetailView.swift; sourceTree = "<group>"; };
 		FBBF1733281D5D7000CDE4BC /* MovingPictureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingPictureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBF1736281D5D7000CDE4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBBF1738281D5D7000CDE4BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA8C141281FBA8D00D4EB46 /* Kingfisher in Frameworks */,
 				FBBF1760281E588800CDE4BC /* SnapKit in Frameworks */,
 				FBBF175A281E575B00CDE4BC /* Then in Frameworks */,
 				FBBF175D281E576B00CDE4BC /* Alamofire in Frameworks */,
@@ -71,6 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FBA8C142281FCA5500D4EB46 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FBA8C143281FCA6500D4EB46 /* Extension+ */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FBA8C143281FCA6500D4EB46 /* Extension+ */ = {
+			isa = PBXGroup;
+			children = (
+				FBA8C144281FCA7D00D4EB46 /* UIViewController+.swift */,
+			);
+			path = "Extension+";
+			sourceTree = "<group>";
+		};
 		FBBF172A281D5D7000CDE4BC = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +123,7 @@
 				FBBF1775281E836100CDE4BC /* Constant */,
 				FBBF174B281D5DA700CDE4BC /* Coordinator */,
 				FBBF174A281D5DA600CDE4BC /* DI */,
+				FBA8C142281FCA5500D4EB46 /* Resource */,
 				FBBF1738281D5D7000CDE4BC /* SceneDelegate.swift */,
 				FBBF1736281D5D7000CDE4BC /* AppDelegate.swift */,
 				FBBF173C281D5D7000CDE4BC /* Main.storyboard */,
@@ -132,6 +157,7 @@
 				FBBF1752281E55CD00CDE4BC /* BaseViewController.swift */,
 				FBBF1754281E565C00CDE4BC /* GifMainController.swift */,
 				FBBF176F281E747700CDE4BC /* GifMain+CollectionView.swift */,
+				FBA8C146281FD6E900D4EB46 /* GifDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +169,7 @@
 				FBBF1761281E594900CDE4BC /* GifMainView.swift */,
 				FBBF176B281E720A00CDE4BC /* GifMainCell.swift */,
 				FBBF176D281E727A00CDE4BC /* BaseCollectionViewCell.swift */,
+				FBA8C148281FDD3800D4EB46 /* GifDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +234,7 @@
 				FBBF1759281E575B00CDE4BC /* Then */,
 				FBBF175C281E576B00CDE4BC /* Alamofire */,
 				FBBF175F281E588800CDE4BC /* SnapKit */,
+				FBA8C140281FBA8D00D4EB46 /* Kingfisher */,
 			);
 			productName = MovingPictureApp;
 			productReference = FBBF1733281D5D7000CDE4BC /* MovingPictureApp.app */;
@@ -240,6 +268,7 @@
 				FBBF1758281E575A00CDE4BC /* XCRemoteSwiftPackageReference "Then" */,
 				FBBF175B281E576B00CDE4BC /* XCRemoteSwiftPackageReference "Alamofire" */,
 				FBBF175E281E588800CDE4BC /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FBA8C13F281FBA8C00D4EB46 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FBBF1734281D5D7000CDE4BC /* Products */;
 			projectDirPath = "";
@@ -269,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBBF1770281E747700CDE4BC /* GifMain+CollectionView.swift in Sources */,
+				FBA8C147281FD6E900D4EB46 /* GifDetailController.swift in Sources */,
 				FBBF1762281E594900CDE4BC /* GifMainView.swift in Sources */,
 				FBBF176C281E720A00CDE4BC /* GifMainCell.swift in Sources */,
 				FBBF1768281E5EEA00CDE4BC /* MainCoordinator.swift in Sources */,
@@ -282,8 +312,10 @@
 				FBBF1753281E55CD00CDE4BC /* BaseViewController.swift in Sources */,
 				FBBF176A281E676800CDE4BC /* CompositionRoot.swift in Sources */,
 				FBBF177B281E89B100CDE4BC /* GiphyModel.swift in Sources */,
+				FBA8C145281FCA7D00D4EB46 /* UIViewController+.swift in Sources */,
 				FBBF1766281E5DB600CDE4BC /* Coordinator.swift in Sources */,
 				FBBF1774281E821500CDE4BC /* NetworkResult.swift in Sources */,
+				FBA8C149281FDD3800D4EB46 /* GifDetailView.swift in Sources */,
 				FBBF1777281E83BF00CDE4BC /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +536,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FBA8C13F281FBA8C00D4EB46 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		FBBF1758281E575A00CDE4BC /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -531,6 +571,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FBA8C140281FBA8D00D4EB46 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBA8C13F281FBA8C00D4EB46 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		FBBF1759281E575B00CDE4BC /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBBF1758281E575A00CDE4BC /* XCRemoteSwiftPackageReference "Then" */;

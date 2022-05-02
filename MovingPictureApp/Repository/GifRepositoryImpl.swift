@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 struct GifRepositoryImpl {
+    static let shared = GifRepositoryImpl()
     
     func getQuery(keyword: String?) -> String {
         guard let keyword = keyword else { return "&q=" }
@@ -33,7 +34,7 @@ struct GifRepositoryImpl {
             }
             
             if let giphy = response.value?.data {
-                print("성공: \(giphy)")
+//                print("성공: \(giphy)")
                 return completion(.success(giphy))
             }
         }

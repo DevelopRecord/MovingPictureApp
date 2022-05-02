@@ -13,19 +13,24 @@ class GifMainController: BaseViewController {
 
     let selfView = GifMainView()
 
+    var gifModel: [GiphyModel] = []
+
+    
+
+    var searchText: String = ""
+
+
     // MARK: - Lifecycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        GifRepositoryImpl().getGifInfo(keyword: "flower") { gif in
-            print("gif 정보는 ?? : \(gif)")
-        }
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+
+    // MARK: - Helpers
 
     override func configureUI() {
-        configureNavigationBar()
-        selfView.searchController.delegate = self
-        selfView.searchController.searchResultsUpdater = self
+        configureNavigationBar(title: "Search")
+        selfView.searchController.searchBar.delegate = self
         navigationItem.searchController = selfView.searchController
         selfView.collectionView.delegate = self
         selfView.collectionView.dataSource = self
@@ -38,29 +43,35 @@ class GifMainController: BaseViewController {
         }
     }
 
-    func configureNavigationBar() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .secondarySystemBackground
-
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance // 스크롤 할 때 navigationBar의 사이즈가 컴팩트하게 합니다.
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Search"
-
-        navigationController?.navigationBar.isTranslucent = true
+    func getGifData() {
+        GifRepositoryImpl.shared.getGifInfo(keyword: searchText) { result in
+            switch result {
+            case .success(let gifData):
+                DispatchQueue.main.async {
+                    self.gifModel = gifData
+                    print("gif 정보는 ?? : \(gifData)")
+                    
+                    self.selfView.collectionView.reloadData()
+                }
+                
+            case .failure(let err):
+                print("err: \(err.localizedDescription)")
+            }
+        }
     }
 }
 
-extension GifMainController: UISearchControllerDelegate {
-
-}
-
-extension GifMainController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text)
+extension GifMainController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // 서치버튼 클릭시 값 리턴
+        if let text = searchBar.text {
+            searchText = text
+            getGifData()
+            if text.isEmpty {
+                navigationItem.title = "Search"
+            } else {
+                navigationItem.title = searchText
+            }
+        }        
     }
 }

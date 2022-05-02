@@ -7,12 +7,16 @@
 
 import UIKit
 
+import Kingfisher
+import SnapKit
+import Then
+
 class BaseView: UIView {
 
     // MARK: - Properties
 
     // MARK: - Lifecycle
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -27,7 +31,6 @@ class BaseView: UIView {
 
     func configureUI() {
         backgroundColor = .secondarySystemBackground
-        configureConstraints()
     }
 
     func configureConstraints() {
