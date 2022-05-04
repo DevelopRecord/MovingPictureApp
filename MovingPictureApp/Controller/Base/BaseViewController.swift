@@ -22,6 +22,10 @@ class BaseViewController: UIViewController {
         configureUI()
         configureConstraints()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -35,7 +39,6 @@ class BaseViewController: UIViewController {
 
     func configureUI() {
         view.backgroundColor = .secondarySystemBackground
-        configureConstraints()
     }
 
     func configureConstraints() {

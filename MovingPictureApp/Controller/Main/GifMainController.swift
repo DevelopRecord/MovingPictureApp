@@ -15,16 +15,7 @@ class GifMainController: BaseViewController {
 
     var gifModel: [GiphyModel] = []
 
-    
-
     var searchText: String = ""
-
-
-    // MARK: - Lifecycle
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
 
     // MARK: - Helpers
 
@@ -50,10 +41,10 @@ class GifMainController: BaseViewController {
                 DispatchQueue.main.async {
                     self.gifModel = gifData
                     print("gif 정보는 ?? : \(gifData)")
-                    
+
                     self.selfView.collectionView.reloadData()
                 }
-                
+
             case .failure(let err):
                 print("err: \(err.localizedDescription)")
             }
@@ -72,6 +63,6 @@ extension GifMainController: UISearchBarDelegate {
             } else {
                 navigationItem.title = searchText
             }
-        }        
+        }
     }
 }

@@ -24,9 +24,10 @@ extension GifMainController: UICollectionViewDelegateFlowLayout, UICollectionVie
         let width = view.frame.width / 3 - 8
         return CGSize(width: width, height: width)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = GifDetailController()
+        controller.selfView.gifModel = gifModel[indexPath.row]
         controller.modalPresentationStyle = .automatic
         self.present(controller, animated: true, completion: nil)
     }
