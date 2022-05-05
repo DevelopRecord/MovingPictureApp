@@ -17,14 +17,23 @@ class GifMainController: BaseViewController {
 
     var searchText: String = ""
 
+    // MARK: - Lifecycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureNavigationBar(title: "Search", isLargeTitle: true)
+    }
+
     // MARK: - Helpers
 
     override func configureUI() {
-        configureNavigationBar(title: "Search")
         selfView.searchController.searchBar.delegate = self
         navigationItem.searchController = selfView.searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         selfView.collectionView.delegate = self
         selfView.collectionView.dataSource = self
+        let right = UIBarButtonItem(image: UIImage(systemName: "gearshape.fill"), style: .plain, target: self, action: #selector(handleSetting))
+        navigationItem.rightBarButtonItem = right
     }
 
     override func configureConstraints() {
@@ -49,6 +58,13 @@ class GifMainController: BaseViewController {
                 print("err: \(err.localizedDescription)")
             }
         }
+    }
+
+    // MARK: - Selectors
+
+    @objc func handleSetting() {
+        let controller = AppearanceController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

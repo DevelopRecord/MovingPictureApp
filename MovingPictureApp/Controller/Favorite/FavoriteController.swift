@@ -16,7 +16,7 @@ class FavoriteController: BaseViewController {
     // MARK: - Helpers
     
     override func configureUI() {
-        configureNavigationBar(title: "Favorite")
+        configureNavigationBar(title: "Favorite", isLargeTitle: true)
         selfView.tableView.delegate = self
         selfView.tableView.dataSource = self
         selfView.tableView.rowHeight = 130
