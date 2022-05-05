@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		FB792A9328227EA7004B748F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FB792A9228227EA7004B748F /* Kingfisher */; };
+		FB792A992823BB02004B748F /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB792A982823BB02004B748F /* AppearanceController.swift */; };
+		FB792AA82823BD66004B748F /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB792AA72823BD66004B748F /* AppearanceView.swift */; };
+		FB792AAB2823BDCB004B748F /* AppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB792AAA2823BDCB004B748F /* AppearanceCell.swift */; };
+		FB792AAD2823BF62004B748F /* Appearance+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB792AAC2823BF62004B748F /* Appearance+TableView.swift */; };
+		FB792AAF2823C506004B748F /* AppearanceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB792AAE2823C506004B748F /* AppearanceHeader.swift */; };
+		FB792AB12823C5FA004B748F /* AppearanceFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB792AB02823C5FA004B748F /* AppearanceFooter.swift */; };
 		FBA8C1782822783500D4EB46 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8C1732822783500D4EB46 /* TabbarController.swift */; };
 		FBA8C1872822788600D4EB46 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8C1862822788600D4EB46 /* BaseViewController.swift */; };
 		FBA8C18C282278CA00D4EB46 /* GifDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA8C18B282278CA00D4EB46 /* GifDetailController.swift */; };
@@ -43,6 +49,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB792A982823BB02004B748F /* AppearanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
+		FB792AA72823BD66004B748F /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
+		FB792AAA2823BDCB004B748F /* AppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCell.swift; sourceTree = "<group>"; };
+		FB792AAC2823BF62004B748F /* Appearance+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Appearance+TableView.swift"; sourceTree = "<group>"; };
+		FB792AAE2823C506004B748F /* AppearanceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHeader.swift; sourceTree = "<group>"; };
+		FB792AB02823C5FA004B748F /* AppearanceFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceFooter.swift; sourceTree = "<group>"; };
 		FBA8C1732822783500D4EB46 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabbarController.swift; path = ../../../../MovingPictureApp/MovingPictureApp/Controller/TabbarController.swift; sourceTree = "<group>"; };
 		FBA8C1862822788600D4EB46 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ../../../../../MovingPictureApp/MovingPictureApp/Controller/Base/BaseViewController.swift; sourceTree = "<group>"; };
 		FBA8C18B282278CA00D4EB46 /* GifDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GifDetailController.swift; path = ../../../../../MovingPictureApp/MovingPictureApp/Controller/Detail/GifDetailController.swift; sourceTree = "<group>"; };
@@ -91,6 +103,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB792A942823B9C5004B748F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FB792A982823BB02004B748F /* AppearanceController.swift */,
+				FB792AAC2823BF62004B748F /* Appearance+TableView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		FB792AA62823BD12004B748F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FB792AA72823BD66004B748F /* AppearanceView.swift */,
+				FB792AAA2823BDCB004B748F /* AppearanceCell.swift */,
+				FB792AAE2823C506004B748F /* AppearanceHeader.swift */,
+				FB792AB02823C5FA004B748F /* AppearanceFooter.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		FBA8C1852822788100D4EB46 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,10 +237,10 @@
 				FBBF174F281D5DAB00CDE4BC /* Model */,
 				FBBF174D281D5DA900CDE4BC /* View */,
 				FBBF174C281D5DA800CDE4BC /* Controller */,
+				FBA8C1BF28227D0A00D4EB46 /* Resource */,
 				FBBF1775281E836100CDE4BC /* Constant */,
 				FBBF174B281D5DA700CDE4BC /* Coordinator */,
 				FBBF174A281D5DA600CDE4BC /* DI */,
-				FBA8C1BF28227D0A00D4EB46 /* Resource */,
 				FBBF1738281D5D7000CDE4BC /* SceneDelegate.swift */,
 				FBBF1736281D5D7000CDE4BC /* AppDelegate.swift */,
 				FBBF173C281D5D7000CDE4BC /* Main.storyboard */,
@@ -239,11 +271,12 @@
 		FBBF174C281D5DA800CDE4BC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FBA8C1732822783500D4EB46 /* TabbarController.swift */,
+				FBA8C1852822788100D4EB46 /* Base */,
 				FBA8C18A282278BE00D4EB46 /* Main */,
 				FBA8C189282278B300D4EB46 /* Favorite */,
 				FBA8C188282278AF00D4EB46 /* Detail */,
-				FBA8C1852822788100D4EB46 /* Base */,
-				FBA8C1732822783500D4EB46 /* TabbarController.swift */,
+				FB792A942823B9C5004B748F /* Setting */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +284,7 @@
 		FBBF174D281D5DA900CDE4BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB792AA62823BD12004B748F /* Setting */,
 				FBA8C1B228227C2F00D4EB46 /* Base */,
 				FBA8C1B628227C2F00D4EB46 /* Detail */,
 				FBA8C1AD28227C2F00D4EB46 /* Favorite */,
@@ -387,10 +421,15 @@
 				FBA8C1872822788600D4EB46 /* BaseViewController.swift in Sources */,
 				FBBF176A281E676800CDE4BC /* CompositionRoot.swift in Sources */,
 				FBA8C1BE28227C2F00D4EB46 /* GifDetailView.swift in Sources */,
+				FB792AAF2823C506004B748F /* AppearanceHeader.swift in Sources */,
 				FBBF177B281E89B100CDE4BC /* GiphyModel.swift in Sources */,
+				FB792A992823BB02004B748F /* AppearanceController.swift in Sources */,
+				FB792AAB2823BDCB004B748F /* AppearanceCell.swift in Sources */,
+				FB792AB12823C5FA004B748F /* AppearanceFooter.swift in Sources */,
 				FBA8C1782822783500D4EB46 /* TabbarController.swift in Sources */,
 				FBA8C1BA28227C2F00D4EB46 /* GifMainCell.swift in Sources */,
 				FBA8C190282278EB00D4EB46 /* FavoriteController.swift in Sources */,
+				FB792AA82823BD66004B748F /* AppearanceView.swift in Sources */,
 				FBBF1766281E5DB600CDE4BC /* Coordinator.swift in Sources */,
 				FBA8C1BC28227C2F00D4EB46 /* BaseCollectionViewCell.swift in Sources */,
 				FBA8C1C228227D2F00D4EB46 /* UIViewController+.swift in Sources */,
@@ -401,6 +440,7 @@
 				FBA8C18C282278CA00D4EB46 /* GifDetailController.swift in Sources */,
 				FBA8C1B928227C2F00D4EB46 /* FavoriteView.swift in Sources */,
 				FBBF1777281E83BF00CDE4BC /* Const.swift in Sources */,
+				FB792AAD2823BF62004B748F /* Appearance+TableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +596,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +624,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

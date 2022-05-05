@@ -9,17 +9,17 @@ import UIKit
 
 extension UIViewController {
     
-    func configureNavigationBar(title: String) {
+    func configureNavigationBar(title: String, isLargeTitle: Bool) {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.system]
         appearance.backgroundColor = .secondarySystemBackground
 
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance // 스크롤 할 때 navigationBar의 사이즈가 컴팩트하게 합니다.
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
 
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = isLargeTitle
         navigationItem.title = title
         navigationController?.navigationBar.isTranslucent = true
     }
