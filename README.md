@@ -19,9 +19,9 @@ Giphy API의 Gif 파일들을 불러오고 검색할 수 있는 앱을 만듭니
 - UIKit
    
 #### 미리보기
-![MovingPictureApp-preview](https://user-images.githubusercontent.com/76255765/167103487-13466ab2-3335-4f6d-819a-80aa18fec668.gif)
+<img width="40%" height="60%" src="https://user-images.githubusercontent.com/76255765/167115740-0c3384be-056f-42f5-8332-2d7ccf31d90b.gif"/>
 
-메인화면의 서치바에서 검색키워드를 입력하면 그 결과에 맞는 gif 이미지를 보여주고 앱 인터페이스를 변경 가능합니다.
+메인화면의 서치바에서 검색키워드를 입력하면 그 결과에 맞는 gif 이미지를 보여주고 화면설정 탭에서 앱 인터페이스를 변경 가능합니다.
   
 #### 기능
    
